@@ -1,5 +1,25 @@
 const menuButton = document.querySelector('.menu-button');
 const navigation = document.querySelector('.main-nav');
+const themeToggle = document.querySelector('.theme-toggle');
+const themeIcon = document.querySelector('.theme-toggle-icon');
+
+function setTheme(theme) {
+  const isDark = theme === 'dark';
+  document.documentElement.dataset.theme = theme;
+  themeToggle.setAttribute('aria-label', isDark ? 'Ativar tema claro' : 'Ativar tema escuro');
+  themeToggle.title = isDark ? 'Ativar tema claro' : 'Ativar tema escuro';
+  themeIcon.textContent = isDark ? '☀' : '☾';
+  document.querySelector('meta[name="theme-color"]').content = isDark ? '#141a16' : '#dff4c9';
+}
+
+const savedTheme = localStorage.getItem('patinhas-theme');
+setTheme(savedTheme || 'light');
+
+themeToggle.addEventListener('click', () => {
+  const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('patinhas-theme', nextTheme);
+  setTheme(nextTheme);
+});
 
 menuButton.addEventListener('click', () => {
   const open = navigation.classList.toggle('open');

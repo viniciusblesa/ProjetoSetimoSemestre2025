@@ -76,6 +76,54 @@ button, input { font: inherit; }
 }
 .main-nav .nav-download:hover { color: var(--white); background: var(--green-dark); transform: translateY(-2px); }
 .menu-button { display: none; }
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--white);
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+.theme-toggle:hover { border-color: var(--green); transform: rotate(-8deg); }
+.theme-toggle:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+.theme-toggle-icon { font-size: 23px; line-height: 1; }
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #e8eee8;
+  --muted: #aab8ad;
+  --green: #83ce91;
+  --green-dark: #9adea7;
+  --lime: #293b2e;
+  --cream: #141a16;
+  --white: #202922;
+  --line: #354139;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.32);
+}
+:root[data-theme="dark"] .site-header { background: rgba(20, 26, 22, 0.94); }
+:root[data-theme="dark"] .main-nav .nav-download,
+:root[data-theme="dark"] .chat-header,
+:root[data-theme="dark"] footer { color: #f2f7f2; background: #0e1510; }
+:root[data-theme="dark"] .main-nav .nav-download:hover { background: #26392b; }
+:root[data-theme="dark"] .button-primary,
+:root[data-theme="dark"] .chat-launcher,
+:root[data-theme="dark"] .chat-form button { color: #142018; }
+:root[data-theme="dark"] .adoption { background: linear-gradient(120deg, #1c2a20 0%, #263b2b 100%); }
+:root[data-theme="dark"] .adoption p { color: #c1cec3; }
+:root[data-theme="dark"] .about-grid article:hover { border-color: #52775b; }
+:root[data-theme="dark"] .bot-message { color: var(--ink); background: #2a382e; }
+:root[data-theme="dark"] .theme-toggle { color: #f2d47c; background: #263329; }
+
+.site-header,
+.about,
+.adoption,
+footer,
+.chat-box,
+.theme-toggle { transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease; }
 
 .hero {
   min-height: 620px;
@@ -223,7 +271,7 @@ footer {
 }
 .brand-footer img { filter: brightness(0) invert(1); }
 .brand-footer strong { color: #9bdca8; }
-footer p { color: #bdc7be; }
+footer p { color: black }
 
 .chat-launcher {
   position: fixed;
@@ -529,3 +577,5 @@ footer{
     margin-top: 30px;
     padding: 15px;
 }
+
+:root[data-theme="dark"] body { background-color: var(--cream); }
