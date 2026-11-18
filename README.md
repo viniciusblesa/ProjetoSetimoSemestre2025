@@ -3,10 +3,6 @@
 
 Site institucional responsivo para apresentar a iniciativa de resgate, cuidado e adoção responsável de animais.
 
-## Acessar
-
-https://viniciusblesa.github.io/ProjetoSetimoSemestre2025/
-
 =======
 # Paraíso Patinhas
 
