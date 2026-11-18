@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-# Projeto 7° Semestre de Ciência da Computação 2025 — Paraíso Patinhas
+# Projeto 7º Semestre de Ciência da Computação 2025 — Paraíso Patinhas
 
 Site institucional responsivo para apresentar a iniciativa de resgate, cuidado e adoção responsável de animais.
 
-=======
-# Paraíso Patinhas
-
-Site institucional responsivo para apresentar a iniciativa de resgate, cuidado e adoção responsável de animais.
-
->>>>>>> 9c2bd4a (Atualização total do site)
 ## Executar localmente
 
 ```powershell
@@ -22,12 +15,7 @@ Acesse `http://127.0.0.1:5000`.
 
 O projeto usa `templates/` para páginas HTML e `static/` para CSS, JavaScript e imagens.
 
-<<<<<<< HEAD
-- **GitHub Pages:** publica o conteúdo visual, mas não executa o backend Flask.
-=======
-- **GitHub Pages:** publica corretamente o conteúdo visual, mas não executa o backend Flask.
->>>>>>> 9c2bd4a (Atualização total do site)
-- **Hospedagem Flask:** é necessária para manter o atendimento do chatbot funcionando.
+Este projeto usa Flask. O GitHub Pages não executa aplicações Flask, então o push para o GitHub não publica o site. Para disponibilizá-lo por uma URL pública, é necessário hospedá-lo em um serviço compatível com Python e Flask. Ainda não há uma URL de produção configurada neste repositório.
 
 ## Estrutura
 
