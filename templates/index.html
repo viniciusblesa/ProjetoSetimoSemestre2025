@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#dff4c9">
+  <meta name="description" content="Conheça o Paraíso Patinhas, uma iniciativa dedicada ao resgate, cuidado e adoção responsável de cães e gatos.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Paraíso Patinhas">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Paraíso Patinhas">
+  <meta property="og:title" content="Paraíso Patinhas — adoção responsável">
+  <meta property="og:description" content="Encontre seu novo melhor amigo e saiba como apoiar o resgate e a adoção responsável.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Paraíso Patinhas — adoção responsável">
+  <meta name="twitter:description" content="Resgate, cuidado e amor para ajudar cães e gatos a encontrarem um lar.">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/Logo.png') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/Logo.png') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Paraíso Patinhas — adoção responsável</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir para o início">
+      <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo Paraíso Patinhas">
+      <span>PARAÍSO <strong>PATINHAS</strong></span>
+    </a>
+
+    <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#sobre">Conheça-nos</a>
+      <a class="nav-download" href="#adocao">Adotar um pet</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <span class="eyebrow">Resgate • cuidado • amor</span>
+        <h1 id="hero-title">Um lar muda tudo.<br><em>Vamos encontrar o seu?</em></h1>
+        <p>Conectamos pessoas apaixonadas por animais a novos amigos que aguardam uma segunda chance.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#adocao">Conhecer o sistema</a>
+          <a class="button button-secondary" href="#sobre">Nossa missão</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="image-shape">
+          <img src="{{ url_for('static', filename='img/AmigoPet.jpg') }}" alt="Pessoa oferecendo carinho a um animal resgatado">
+        </div>
+        <div class="floating-card"><strong>+ amor</strong><span>todos os dias</span></div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre" aria-labelledby="about-title">
+      <div class="section-heading">
+        <span class="eyebrow">Quem somos</span>
+        <h2 id="about-title">Cuidado que transforma vidas</h2>
+      </div>
+      <div class="about-grid">
+        <article>
+          <span class="feature-number">01</span>
+          <h3>Resgate e acolhimento</h3>
+          <p>Recebemos animais abandonados e oferecemos cuidados veterinários, alimentação e muito afeto.</p>
+        </article>
+        <article>
+          <span class="feature-number">02</span>
+          <h3>Adoção responsável</h3>
+          <p>Apoiamos uma relação consciente entre tutores e pets, pensando no bem-estar de todos.</p>
+        </article>
+        <article>
+          <span class="feature-number">03</span>
+          <h3>Amor para a vida toda</h3>
+          <p>Cada adoção é acompanhada com carinho para garantir um novo começo seguro e feliz.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="adoption" id="adocao" aria-labelledby="adoption-title">
+      <div class="adoption-content">
+        <span class="eyebrow">Comece sua história</span>
+        <h2 id="adoption-title">Seu novo melhor amigo está esperando por você.</h2>
+        <p>Baixe nosso sistema exclusivo para conhecer os animais disponíveis, suas fotos, histórias e necessidades.</p>
+        <a class="button button-primary" href="https://drive.google.com/drive/folders/1_sKsSDinLePKQOX8z-UCKqz5Js-101kS?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          Fazer download
+        </a>
+      </div>
+      <div class="paw-mark" aria-hidden="true">🐾</div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand brand-footer" href="#inicio">
+      <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo Paraíso Patinhas">
+      <span>PARAÍSO <strong>PATINHAS</strong></span>
+    </a>
+    <p>&copy; <span id="year"></span> Paraíso Patinhas</p>
+  </footer>
+
+  <button class="chat-launcher" type="button" aria-label="Abrir atendimento" aria-expanded="false">🐾</button>
+  <aside class="chat-box" aria-label="Chat de atendimento" aria-hidden="true">
+    <header class="chat-header">
+      <div>
+        <strong>Atendimento Patinhas</strong>
+        <span>Estamos aqui para ajudar</span>
+      </div>
+      <button class="chat-close" type="button" aria-label="Fechar chat">×</button>
+    </header>
+    <div class="chat-output" aria-live="polite">
+      <p class="bot-message">Olá! Posso ajudar você a conhecer o processo de adoção.</p>
+    </div>
+    <form class="chat-form">
+      <label class="sr-only" for="chat-input">Digite sua pergunta</label>
+      <input id="chat-input" type="text" placeholder="Digite sua pergunta..." autocomplete="off" maxlength="500">
+      <button type="submit" aria-label="Enviar mensagem">➤</button>
+    </form>
+  </aside>
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</body>
+</html>
