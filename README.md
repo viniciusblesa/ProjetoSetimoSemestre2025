@@ -17,6 +17,8 @@ O projeto usa `templates/` para páginas HTML e `static/` para CSS, JavaScript e
 
 Este projeto usa Flask. O GitHub Pages não executa aplicações Flask, então o push para o GitHub não publica o site. Para disponibilizá-lo por uma URL pública, é necessário hospedá-lo em um serviço compatível com Python e Flask. Ainda não há uma URL de produção configurada neste repositório.
 
+Para publicar no Render, envie este repositório ao GitHub e crie um novo Blueprint no Render conectado a ele. O arquivo `render.yaml` configura a instalação e a inicialização do app; após o deploy, o Render fornece a URL pública.
+
 ## Estrutura
 
 ```text
