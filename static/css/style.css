@@ -22,7 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img { display: block; max-width: 100%; }
-a { color: inherit; }
+a { color: #9bdca8; }
 button, input { font: inherit; }
 
 .sr-only {
@@ -271,7 +271,7 @@ footer {
 }
 .brand-footer img { filter: brightness(0) invert(1); }
 .brand-footer strong { color: #9bdca8; }
-footer p { color: black }
+footer p { color: #9bdca8 }
 
 .chat-launcher {
   position: fixed;
