@@ -23,6 +23,7 @@ body {
 }
 img { display: block; max-width: 100%; }
 a { color: #9bdca8; }
+header nav a { color: #f2f7f2; background: #0e1510; padding: 13px 20px; border-radius: 999px;}
 button, input { font: inherit; }
 
 .sr-only {
@@ -270,8 +271,8 @@ footer {
   color: var(--white);
 }
 .brand-footer img { filter: brightness(0) invert(1); }
-.brand-footer strong { color: #9bdca8; }
-footer p { color: #9bdca8 }
+.brand-footer strong {color: var(--green);}
+footer p { color: var(--green); }
 
 .chat-launcher {
   position: fixed;
